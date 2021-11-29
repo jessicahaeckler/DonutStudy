@@ -5,9 +5,9 @@ proc plan seed=12345; *set seed for replication;
 	factors Row=4 ordered Col=4 ordered / noprint;
 	treatments Tmt=4 cyclic;
 	output out=LatinSquare 
-			Row cvals=('Person 1' 'Person 2' 'Person 3' 'Person 4') random
+			Row cvals=('Andrew' 'Jack' 'Larry' 'Dan') random
 			Col cvals=('Milk' 'Water' 'Coffee' 'Juice') random
-			Tmt cvals=('Brand 1' 'Brand 2' 'Brand 3' 'Brand 4') random;
+			Tmt cvals=('Dunkin' 'Paradise' 'Kroger' 'Pink') random;
 	quit;
 	proc sort data=LatinSquare out=LatinSquare;
 		by Row Col;
